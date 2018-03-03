@@ -353,5 +353,10 @@ namespace WindowsFormsApplication1
         {
 
         }
+
+        private void toolStripMenuItem4_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
