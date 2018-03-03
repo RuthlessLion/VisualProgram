@@ -221,7 +221,9 @@ namespace WindowsFormsApplication1
         private void button11_Click(object sender, EventArgs e)
         {
             this.Cursor = Cursors.WaitCursor;
-            
+
+            System.Threading.Thread.Sleep(1000);
+
             SortListBox(listBox1, comboBox2);
 
             this.Cursor = Cursors.Default;

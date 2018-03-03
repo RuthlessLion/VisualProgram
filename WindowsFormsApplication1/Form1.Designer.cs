@@ -52,6 +52,8 @@
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.button14 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
@@ -69,8 +71,6 @@
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -116,7 +116,7 @@
             this.radioButton1.Checked = true;
             this.radioButton1.Location = new System.Drawing.Point(6, 19);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(44, 17);
+            this.radioButton1.Size = new System.Drawing.Size(46, 19);
             this.radioButton1.TabIndex = 4;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Все";
@@ -127,7 +127,7 @@
             this.radioButton2.AutoSize = true;
             this.radioButton2.Location = new System.Drawing.Point(6, 42);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(128, 17);
+            this.radioButton2.Size = new System.Drawing.Size(144, 19);
             this.radioButton2.TabIndex = 5;
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Содержащие цифры";
@@ -138,7 +138,7 @@
             this.radioButton3.AutoSize = true;
             this.radioButton3.Location = new System.Drawing.Point(6, 65);
             this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(121, 17);
+            this.radioButton3.Size = new System.Drawing.Size(138, 19);
             this.radioButton3.TabIndex = 6;
             this.radioButton3.TabStop = true;
             this.radioButton3.Text = "Содержащие e-mail";
@@ -150,16 +150,16 @@
             this.groupBox1.Controls.Add(this.radioButton1);
             this.groupBox1.Controls.Add(this.radioButton3);
             this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Location = new System.Drawing.Point(206, 275);
+            this.groupBox1.Location = new System.Drawing.Point(184, 275);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(208, 95);
+            this.groupBox1.Size = new System.Drawing.Size(230, 95);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Выбор слов";
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(137, 52);
+            this.button7.Location = new System.Drawing.Point(157, 52);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(67, 37);
             this.button7.TabIndex = 15;
@@ -184,9 +184,9 @@
             // 
             // button10
             // 
-            this.button10.Location = new System.Drawing.Point(81, 140);
+            this.button10.Location = new System.Drawing.Point(80, 140);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(49, 40);
+            this.button10.Size = new System.Drawing.Size(50, 40);
             this.button10.TabIndex = 16;
             this.button10.Text = "Поиск";
             this.button10.UseVisualStyleBackColor = true;
@@ -197,7 +197,7 @@
             this.checkBox2.AutoSize = true;
             this.checkBox2.Location = new System.Drawing.Point(7, 163);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(72, 17);
+            this.checkBox2.Size = new System.Drawing.Size(78, 19);
             this.checkBox2.TabIndex = 3;
             this.checkBox2.Text = "Раздел 2";
             this.checkBox2.UseVisualStyleBackColor = true;
@@ -209,7 +209,7 @@
             this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox1.Location = new System.Drawing.Point(7, 140);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(72, 17);
+            this.checkBox1.Size = new System.Drawing.Size(78, 19);
             this.checkBox1.TabIndex = 2;
             this.checkBox1.Text = "Раздел 1";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -339,6 +339,25 @@
             this.panel1.TabIndex = 17;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(278, 18);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(59, 15);
+            this.label2.TabIndex = 22;
+            this.label2.Text = "Раздел 2";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(28, 19);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(59, 15);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "Раздел 1";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
             // comboBox3
             // 
             this.comboBox3.FormattingEnabled = true;
@@ -406,31 +425,32 @@
             // 
             // contextMenuStrip1
             // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(18, 18);
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.openFileToolStripMenuItem,
             this.saveToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(104, 70);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(113, 76);
             this.contextMenuStrip1.Text = "File";
             this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
             // 
             // openFileToolStripMenuItem
             // 
             this.openFileToolStripMenuItem.Name = "openFileToolStripMenuItem";
-            this.openFileToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
+            this.openFileToolStripMenuItem.Size = new System.Drawing.Size(112, 24);
             this.openFileToolStripMenuItem.Text = "Open";
             // 
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(112, 24);
             this.saveToolStripMenuItem.Text = "Save";
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(112, 24);
             this.exitToolStripMenuItem.Text = "Exit";
             // 
             // openFileDialog1
@@ -439,12 +459,13 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(18, 18);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem1,
             this.toolStripMenuItem5});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(650, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(650, 27);
             this.menuStrip1.TabIndex = 18;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -456,55 +477,36 @@
             this.toolStripMenuItem3,
             this.toolStripMenuItem4});
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(37, 20);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(41, 23);
             this.toolStripMenuItem1.Text = "File";
             this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(103, 22);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(164, 24);
             this.toolStripMenuItem2.Text = "Open";
             this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
             // 
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(103, 22);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(164, 24);
             this.toolStripMenuItem3.Text = "Save";
             this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
             // 
             // toolStripMenuItem4
             // 
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(103, 22);
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(164, 24);
             this.toolStripMenuItem4.Text = "Exit";
             // 
             // toolStripMenuItem5
             // 
             this.toolStripMenuItem5.Name = "toolStripMenuItem5";
-            this.toolStripMenuItem5.Size = new System.Drawing.Size(24, 20);
+            this.toolStripMenuItem5.Size = new System.Drawing.Size(27, 23);
             this.toolStripMenuItem5.Text = "?";
             this.toolStripMenuItem5.Click += new System.EventHandler(this.toolStripMenuItem5_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(28, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 13);
-            this.label1.TabIndex = 21;
-            this.label1.Text = "Раздел 1";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(278, 18);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 13);
-            this.label2.TabIndex = 22;
-            this.label2.Text = "Раздел 2";
             // 
             // Form1
             // 
